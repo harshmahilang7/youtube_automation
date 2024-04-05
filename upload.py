@@ -2,7 +2,7 @@
 # @Author: Dastan_Alam
 # @Date: 23-03-2024 06:29:41 PM 18:29:41
 # @Last Modified by:   Dastan_Alam
-# @Last Modified time: 25-03-2024 01:31:05 AM       01:31:05
+# @Last Modified time: 05-04-2024 04:13:35 PM       16:13:35
 import time
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,11 +20,10 @@ def vido_upload(t):
     youtube_studio_url = "https://studio.youtube.com"
     
     # Your YouTube login credentials
-    # email = "harshmahilang9@gmail.com"
-    # password = "1gq2Pe62bob4F42g"
+    # email = "youremail@gmail.com"
+    # password = " yourpaswoord"
     
-    email = "d80976269@gmail.com"
-    password = "title_input.clear()"
+
     
     # Configure Firefox browser options
     firefox_options = webdriver.FirefoxOptions()
