@@ -1,0 +1,141 @@
+<!-- 
+  @Author: Dastan_Alam
+  @Date:   26-03-2024 03:45:01 PM       15:45:01
+  @Last Modified by:   Dastan_Alam
+  @Last Modified time: 26-03-2024 06:33:11 PM       18:33:11
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            margin: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            flex-direction: column;
+            background: url("https://images.pexels.com/photos/268533/pexels-photo-268533.jpeg");
+            background-size: cover;
+            font-family: "Poppins", sans-serif;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            width: 100%;
+            position: relative;
+        }
+
+        header img {
+            max-width: 300px;
+            /* Adjust the maximum width as needed  */
+            display: block; 
+            /* Center the image horizontally */
+            margin: 0px auto;
+            margin-top: 30px; 
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 700;
+            color: #ffffff;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        form {
+            max-width: 500px;
+            backdrop-filter: blur(10px);
+            width: 100%;
+            padding: 30px;
+            background-color: #2e2d2d0a;
+            border-radius: 9px;
+            border: 2px rgba(255, 255, 255, 0.173) solid;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: 300;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        
+        input[type="file"],
+        input[type="text"],
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ced4da;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+            background-color: #007bff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="https://lh3.googleusercontent.com/drive-viewer/AKGpihYCCgyvf4CI-xwrY2qILh88HtbH0gtQojqQeaRKWzN6Tmd5xnikjQpjLOFn68mgIA8TE5AnIBM8TPeGniFtoHrawz69=s1600" class="img-logo" alt="Header Image">
+            <h1>File Upload</h1>
+        </header>
+        <form action="/process" method="POST" enctype="multipart/form-data">
+            
+            <!-- <div class="input-group mb-3">
+                <label class="input-group-text" for="input_video">Upload Video:</label>
+                <input type="file" name="input_video" id="input_video" required class="form-control">
+            </div> -->
+            
+            <label for="input_video">Upload Video:</label>
+            <input type="file" name="input_video" style="color: #ffffff;" id="input_video" required>
+
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title">
+
+            <label for="watermark">Watermark:</label>
+            <input type="text" id="watermark" name="watermark">
+
+            <label for="duration_minutes">Duration (in minutes):</label>
+            <input type="number" name="duration_minutes" id="duration_minutes" required>
+
+            <label for="l">Left Channel Frequency:</label>
+            <input type="number" name="l" id="l" required>
+
+            <label for="r">Right Channel Frequency:</label>
+            <input type="number" name="r" id="r" required>
+
+            <button type="submit" onclick="alert('The program is running..')">Process</button>
+        </form>
+    </div>
+</body>
+
+</html>
